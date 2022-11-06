@@ -9,7 +9,7 @@ r = requests.get('https://a.4cdn.org/pol/catalog.json')
 r = json.loads(r.text)
 
 with open('data.json', 'w') as json_file:
-    json.dump(r, json_file)
+    json.dump(r, json_file) #code for writing to a json_file
 
 
 
