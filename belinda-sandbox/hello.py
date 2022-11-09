@@ -2,20 +2,27 @@ import json
 import requests
 from pprint import pprint
 from datetime import datetime as dt
+import time
 r = requests.get('https://a.4cdn.org/pol/catalog.json')
 r = r.json()
 
 r = requests.get('https://a.4cdn.org/pol/catalog.json')
 r = json.loads(r.text)
+timestr = time.strftime("%Y%m%d-%H")
+filename = f'data{timestr}.json'
 
-with open('data.json', 'w') as json_file:
+
+with open(filename, 'w') as json_file:
     json.dump(r, json_file) #code for writing to a json_file
 
 
+# print(r[0]["threads"])  # nested info
 
-print(r[0]["threads"][0]["com"]) #specific text on one thread
+# print(r[0]["threads"][0]["com"])  # specific text on one thread
 
 # pprint(r)
+
+#words to use - trump
 
 #4CHAN CODE 
 
