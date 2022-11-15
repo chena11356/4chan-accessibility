@@ -18,17 +18,17 @@ boards = [
     'vst','vt','w','wg','wsg','wsr','x',
     'xs','y']
 
-timestr = time.strftime("%Y%m%d-%H")
-
 for board in boards:
+
 
     r = requests.get('https://a.4cdn.org/' + board + '/catalog.json')
     r = r.json()
 
     r = requests.get('https://a.4cdn.org/' + board + '/catalog.json')
     r = json.loads(r.text)
+    timestr = time.strftime("%Y%m%d-%H")
+    filename = f'../data/' + board + '/data' + timestr + '.json'
 
-    filename = '../data/' + board + '/' + board + 'Data' + timestr + '.json'
 
     with open(filename, 'w') as json_file:
         json.dump(r, json_file) #code for writing to a json_file

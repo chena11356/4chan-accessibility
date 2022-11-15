@@ -28,7 +28,7 @@ for board in boards:
     r = requests.get('https://a.4cdn.org/' + board + '/catalog.json')
     r = json.loads(r.text)
 
-    filename = '../data/' + board + '/' + board + 'Data' + timestr + '.json'
+    filename = '../data/' + board + '/data' + timestr + '.json'
 
     with open(filename, 'w') as json_file:
         json.dump(r, json_file) #code for writing to a json_file
