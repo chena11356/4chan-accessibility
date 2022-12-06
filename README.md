@@ -5,7 +5,7 @@ The 4Chan Data Accessibility & Access project began in an effort to address the 
 
 Please refer to the [project proposal](https://docs.google.com/document/d/1UUr4ICrPZ7bCPPykO3giH9UMEwxIIhoTFqbpSbwpHSc/edit?usp=sharing) for more information and/or the [presentation slides](https://docs.google.com/presentation/d/1eLEuoAExj_0qkn_goqQRF-Vf6OpRj0nAVFmIzxcJ6nQ/edit?usp=sharing).
 
-##About
+## About
 ![meme](https://upload.wikimedia.org/wikipedia/en/6/63/Feels_good_man.jpg "Logo Title Text 1")
 
 4chan is a wholly anonymous English Language image-based forum website. 22 million users visit 4chan every month to discuss topics ranging from daily activities to extremist viewpoints. 4chan is divided into 76 boards, some of which are more prone than others to disinformative and problematic content, including the notorious /pol/ (Politically Incorrect). The controversial differentiating factor for 4chan is its complete anonymity and lack of accountability for users. Posts last only for a few days and names are never revealed. (Some boards contain archives where posts go after a few days, and others do not.) Unlike other forum websites like Reddit, an account doesn’t need to be created on the website in order to post. The site is the originator of everything from the mundane, like memes, to the dangerous, like cyberbullying, hoaxes, and disinformation.
