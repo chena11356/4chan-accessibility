@@ -1,3 +1,5 @@
+[![scraper-4chan](https://github.com/chena11356/4chan-accessibility/actions/workflows/scraper-4chan.yml/badge.svg)](https://github.com/chena11356/4chan-accessibility/actions/workflows/scraper-4chan.yml)
+
 4CHAN DATA ACCESSIBILITY & ACCESS
 ======
 
