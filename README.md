@@ -26,6 +26,16 @@ While the site has proven critical to understanding sociopolitical movements lik
 * What are the tradeoffs between free speech and internet safety? 
 * What are the ethical implications of studying extremist forums? 
 
+## Existing Research
+* [The Challenges of Studying 4chan and the Alt-Right](https://doi.org/10.1177/1461444820948803): The research highlights the challenges associated with gathering strong data and research on a forum like 4chan. Colley, Thomas, and Moore discovered that there is limited quantitative analyses of 4chan available due to evolving slang, sarcasm, and imagery. Furthermore, anonymity ont the forum makes identifying individual users and identities particularly difficult. Further research would benefit from online storage of platform content with a blend of quantitative and qualitative analyses. Our project aims to address these issues of a lack of quantitative analyses due to ephemerality by persisting the 4chan data. 
+
+
+* [4chan and /b/: An Analysis of Anonymity and Ephemerality in a Large Online Community](https://ojs.aaai.org/index.php/ICWSM/article/view/14134): This paper analyzes 4chan’s random board /b/ to understand anonymity and ephemerality online. The paper found that roughly 35,000 threads and 400,000 posts per day and the median life of a thread 3.9 minutes (fastest is 28 seconds, longest is 6.2 hours). 4chan's content deletion and ephemerality encourages users to post more frequently, which also keeps content “fresh”. 90% of posts are made completely anonymously and the /b/ community uses non-technical mechanisms like slang and timestamping to signal status and identity. /b/’s anonymity is likely shaping a strong communal identity among a very large set of individuals.
+
+* [From cyberfascism to terrorism: On 4chan/pol/ culture and the transnational production of memetic violence
+](https://doi.org/10.1111/nana.12780): The paper examines the the transnational production of cyberfascism at 4chan /pol/ and argues that platforms like 4chan promote extreme facism globally via cyberfascism, the virtualization of fascist thought and action. In addition, the forum promotes memetic violence and white supremacism globally. Extremist ideology is transnational with ripple effects globally.
+
+
 Getting Started
 ======
 
