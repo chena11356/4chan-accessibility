@@ -1,11 +1,13 @@
 [![scraper-4chan](https://github.com/chena11356/4chan-accessibility/actions/workflows/scraper-4chan.yml/badge.svg)](https://github.com/chena11356/4chan-accessibility/actions/workflows/scraper-4chan.yml)
 
-4CHAN DATA ACCESSIBILITY & ACCESS
+4CHAN DATA ACCESSIBILITY
 ======
 
 The 4Chan Data Accessibility & Access project began in an effort to address the lack of quantitative and qualitative data available for research to adequately study the influence of **wholly anonymous, unmoderated, and influential** forums like [4chan](https://www.4chan.org/). 
 
 Please refer to the [project proposal](https://docs.google.com/document/d/1UUr4ICrPZ7bCPPykO3giH9UMEwxIIhoTFqbpSbwpHSc/edit?usp=sharing) for more information and/or the [presentation slides](https://docs.google.com/presentation/d/1eLEuoAExj_0qkn_goqQRF-Vf6OpRj0nAVFmIzxcJ6nQ/edit?usp=sharing).
+
+We offer 4chan thread-level data in CSV and JSON formats, organized by board and date under the data subfolders. 
 
 ## About
 ![meme](https://upload.wikimedia.org/wikipedia/en/6/63/Feels_good_man.jpg "Logo Title Text 1")
