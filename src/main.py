@@ -21,23 +21,21 @@ boards = [
 
 timestr = time.strftime("%Y%m%d-%H") 
 
-# for board in boards:
+for board in boards:
 
-board = 'b'
+    r = requests.get('https://a.4cdn.org/' + board + '/catalog.json')
+    r = json.loads(r.text)
 
-r = requests.get('https://a.4cdn.org/' + board + '/catalog.json')
-r = json.loads(r.text)
+    threads = []
+    for page in r: 
+        for thread in page['threads']:
+            threads.append(thread)
 
-threads = []
-for page in r: 
-    for thread in page['threads']:
-        threads.append(thread)
+    filename_json = 'data/' + board + '/' + board + 'Data' + timestr + '.json'
+    filename_csv = 'data/' + board + '/' + board + 'Data' + timestr + '.csv'
 
-filename_json = 'data/' + board + '/' + board + 'Data' + timestr + '.json'
-filename_csv = 'data/' + board + '/' + board + 'Data' + timestr + '.csv'
+    with open(filename_json, 'w') as json_file:
+        json.dump(threads, json_file) # write to json file
 
-with open(filename_json, 'w') as json_file:
-    json.dump(threads, json_file) # write to json file
-
-csv_data = pandas.json_normalize(threads)
-csv_data.to_csv(filename_csv) # write to csv file
+    csv_data = pandas.json_normalize(threads)
+    csv_data.to_csv(filename_csv) # write to csv file
