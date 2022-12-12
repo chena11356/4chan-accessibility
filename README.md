@@ -41,8 +41,14 @@ While the site has proven critical to understanding sociopolitical movements lik
 Getting Started
 ======
 
-### Installation 
-NEED TO ADD HERE
+## How It Works
+Our project is a fully automated data scraper using Github actions. The badge at the top of our project indicates the status of the scraper as shown below. 
+
+![badge](images/badge.png)
+
+Furthermore, upon navigating to Github Actions, you can see a full breakdown of the various steps of the job. 
+
+[![Watch the video](images/github_action.png)](images/github_action.mov)
 
 ### System Requirements 
 * [Node.js v16 or above](https://nodejs.org/en/download/)
