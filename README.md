@@ -42,13 +42,15 @@ Getting Started
 ======
 
 ## How It Works
-Our project is a fully automated data scraper using Github actions. The badge at the top of our project indicates the status of the scraper as shown below. 
+Our project is a fully automated data scraper that saves 4chan threads across its boards daily using Github actions. The badge at the top of our project indicates the status of the scraper as shown below. 
 
 ![badge](images/badge.png)
 
 Furthermore, upon navigating to Github Actions, you can see a full breakdown of the various steps of the job. 
 
 [![Watch the video](images/github_action.png)](images/github_action.mov)
+
+Finally, we have included some helpful tools that help process the saved historical 4chan data (as well as current data pulled directly from 4chan). We also demonstrate several analysis functions, mainly calculating sentiment distributions and doing named entity recognition on threads as well as showing trending topics across boards in these Jupyter Notebooks.
 
 ### System Requirements 
 * [Node.js v16 or above](https://nodejs.org/en/download/)
