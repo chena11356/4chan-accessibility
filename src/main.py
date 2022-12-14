@@ -6,6 +6,7 @@ import time
 import pandas
 import os
 
+start = time.time()
 boards = [
     '3','a','aco','adv','an','b','bant',
     'biz','c','cgl','ck','cm','co','d',
@@ -23,29 +24,31 @@ boards = [
 timestr = time.strftime("%Y%m%d-%H") 
 
 for board in boards:
+    try:
+        r = requests.get('https://a.4cdn.org/' + board + '/catalog.json')
+        r = json.loads(r.text)
 
-    r = requests.get('https://a.4cdn.org/' + board + '/catalog.json')
-    r = json.loads(r.text)
+        threads = []
+        for page in r: 
+            for thread in page['threads']:
+                t = requests.get(f'https://a.4cdn.org/{board}/thread/{thread["no"]}.json')
+                t = json.loads(t.text)
+                threads.append(t)
 
-    threads = []
-    for page in r: 
-        for thread in page['threads']:
-            t = requests.get(f'https://a.4cdn.org/{board}/thread/{thread["no"]}.json')
-            t = json.loads(t.text)
-            threads.append(t)
+        folder = 'data/' + board + '/'
 
-    folder = 'data/' + board + '/'
+        if not os.path.exists(folder):
+            os.makedirs(folder)
 
-    if not os.path.exists(folder):
-        os.makedirs(folder)
+        filename = board + 'Data' + timestr
+        filename_json = folder + filename + '.json'
 
-    filename = board + 'Data' + timestr
-    filename_json = folder + filename + '.json'
-
-    with open(filename_json, 'w') as json_file:
-        json.dump(threads, json_file) # write to json file
-    
-    print(board)
+        with open(filename_json, 'w') as json_file:
+            json.dump(threads, json_file) # write to json file
+        
+        print(board)
+    except Exception as e:
+        print(e)
 
 end = time.time()
 print(end - start)
