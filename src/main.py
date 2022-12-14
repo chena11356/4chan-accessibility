@@ -4,6 +4,7 @@ from pprint import pprint
 from datetime import datetime as dt
 import time
 import pandas
+import os
 
 boards = [
     '3','a','aco','adv','an','b','bant',
@@ -29,13 +30,22 @@ for board in boards:
     threads = []
     for page in r: 
         for thread in page['threads']:
-            threads.append(thread)
+            t = requests.get(f'https://a.4cdn.org/{board}/thread/{thread["no"]}.json')
+            t = json.loads(t.text)
+            threads.append(t)
 
-    filename_json = 'data/' + board + '/' + board + 'Data' + timestr + '.json'
-    filename_csv = 'data/' + board + '/' + board + 'Data' + timestr + '.csv'
+    folder = 'data/' + board + '/'
+
+    if not os.path.exists(folder):
+        os.makedirs(folder)
+
+    filename = board + 'Data' + timestr
+    filename_json = folder + filename + '.json'
 
     with open(filename_json, 'w') as json_file:
         json.dump(threads, json_file) # write to json file
+    
+    print(board)
 
-    csv_data = pandas.json_normalize(threads)
-    csv_data.to_csv(filename_csv) # write to csv file
+end = time.time()
+print(end - start)
